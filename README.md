@@ -1,9 +1,9 @@
-** Data Structures **
+## Data Structures ##
 
 This is a data structures util and common  written in various languages
 
 
-*** Structures ***
+### Structures ###
 
 * LinkedList
 	* Single
@@ -11,7 +11,7 @@ This is a data structures util and common  written in various languages
 	* Circular
 * Binary Try 
 
-*** Language: ***
+### Language: ###
 
 * JavaScript
 * TypeScript
@@ -21,5 +21,5 @@ This is a data structures util and common  written in various languages
 * C
 * C++
 
-*** Objetives ***
+### Objetives ###
 It is merely educational 
