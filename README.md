@@ -1,4 +1,4 @@
-## Data Structures ##
+## TypeScript Data Structures ##
 
 This is a data structures util and common  written in various languages
 
@@ -11,15 +11,6 @@ This is a data structures util and common  written in various languages
 	* Circular
 * Binary Try 
 
-### Language: ###
-
-* JavaScript
-* TypeScript
-* Java
-* PHP
-* Python
-* C
-* C++
 
 ### Objetives ###
 It is merely educational 
