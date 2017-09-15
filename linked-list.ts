@@ -1,11 +1,8 @@
 
 
 /**
- * @class NodeItem
- * Estructura del NodoItem<Generico>
- * 
- * Permite acceder al dato y al nodo siguiente
- * 
+ * @class NodoItem<GenericData>
+ * Estructura de un Nodo simple
  */
 class NodeItem<D> {
 
@@ -18,46 +15,29 @@ class NodeItem<D> {
     }
 }
 
-interface IPila {
+/*interface IPila {
     public pop();
     public push();
     public shift();
-
-    /**
-     * @return unshift
-     */
-    public unshift(): boolean;
-
-}
+}*/
 
 interface ILinkedList{
-    public delete_by_index();
-    public delete_by_coincidence();
-    public get_list_node();
-    public insert_node();
+    delete_by_index();
+    delete_by_coincidence();
+    get_list_node();
+    insert_node();
 }
 
-interface 
 
 /**
  * @class LinkedList
  * 
  * Listado de NodeItem
  */
-class LinkedList<D> implements ILinkedList {
+class LinkedList<D> {
 
-    /**
-     * @var {NodeItem}
-     * Contiene al actual NodeItem
-     */
     protected current_node : NodeItem<D>;
-
-    /**
-     * @var {number}
-     */
     protected size: number = 0;
-
-
 
     /**
      * Retorna el tamaño de la lista
@@ -69,7 +49,7 @@ class LinkedList<D> implements ILinkedList {
     }
 
     /**
-     * Inserta un elemento el la lista
+     * Inserta un elemento el la lista, en la primera posición
      * @param data 
      */
     public insert_node(data: D): void {
@@ -98,7 +78,7 @@ class LinkedList<D> implements ILinkedList {
             aux_node = tmp_node.sigte;
 
             if (i === index){
-                = aux_node.sigte;
+               // = aux_node.sigte;
 
                 break;
             }
@@ -123,13 +103,10 @@ class LinkedList<D> implements ILinkedList {
         let aux_node;
         
 
-        while(null !== tmp_node.sigte){
-            aux_node = tmp_node.sigte;
+        while(null !== (aux_node = tmp_node.sigte)){
             tmp_node = aux_node; 
-            
             console.log(tmp_node);
         }
-
     }
 
     /**
@@ -194,15 +171,11 @@ class LinkedList<D> implements ILinkedList {
  * Lista doble enlazada
  */
 class LinkedListDouble<D> extends LinkedList<D>{
-    constructor(){
-        super();
-    }
+    // ...
 }
 
 class LinkedListCircular<D> extends LinkedList<D>{
-    constructor(){
-        super();
-    }
+    // ..
 }
 
 class LinkedListDoubleCircular<D> extends LinkedListDouble<D>{
@@ -226,7 +199,8 @@ function test_linked_list(): void {
     l.insert_node(7);
     l.insert_node(9);
 
-    l.insert_node(10);
+    //l.insert_node(10);
+    
     
     // list the element
     l.get_list_nodes();
